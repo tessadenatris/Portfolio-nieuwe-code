@@ -1,0 +1,534 @@
+/*---------------------------------------------------------------------------------------------- NAVIGATIE----------------------------------
+*/
+nav {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    min-height: 8vh;
+    background-color: black;
+}
+
+h1:nth-of-type(1){
+    color: snow;
+    text-transform: uppercase;
+    letter-spacing: 0.3em;
+    font-size: 1.5em;
+}
+
+.nav-links {
+    display: flex;
+    justify-content: space-around;
+    width: 40%;
+}
+
+.nav-links li {
+    list-style: none;
+}
+
+.nav-links a {
+    color: snow;
+    text-decoration: none;
+    font-weight: bold;
+    padding: 0.4em;
+    font-size: 1em;
+}
+
+.nav-links li a:hover {
+    text-decoration: underline;
+    color: snow;
+   font-size: 1.5em;
+}
+
+/* om het hamburgermenu niet te laten zien*/
+.burgermenu {
+    display: none;
+}
+
+.burgermenu div {
+    width: 1.5em;
+    height: 0.2em;
+    background-color: snow;
+    margin: 0.3em;
+}
+
+@media (max-width: 48em) {
+    body {
+        overflow-x: hidden;
+    }
+
+    .nav-links {
+        position: absolute;
+        right: 0px;
+        margin: 0px;
+        height: 92vh;
+        /* om het fullscreeen te maken */
+        top: 7vh;
+        background-color: black;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 50%;
+        transform: translateX(100%);
+        /* zet de nav container naast het scherm*/
+        transition: tranform 0.5s ease-in;
+        z-index: 1;
+    }
+
+    .burgermenu {
+        display: block;
+        /* hamburgermenu weer zichtbaar*/
+    }
+}
+
+.nav-active {
+    transform: translateX(0%);
+
+
+@keyframes navLinkFade {
+    from {
+        opacity: 0;
+        transform: translateX(50px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateX(0px);
+    }
+}
+}
+
+
+/* bron:https://www.youtube.com/watch?v=gXkqy0b4M5g&t=1335s */
+
+
+/*----------------------------------------------------------------------------------------------HEADER--------------------------------------
+*/
+
+h1:hover {
+    transform: rotate(5deg);
+}
+
+@media (min-width: 32em) {
+    .nav {
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-end;
+        list-style: none;
+        right: 5em;
+    }
+}
+
+/*----------------------------------------------------------------------------------------------MIJN PORTFOLIO----------------------------
+*/
+
+body {
+    margin: 0em;
+    margin-top: 0em;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.vak1 {
+    width: 25em;
+    padding-top: 2em;
+}
+
+.vak2 {
+    width: 25em;
+    padding-top: 2em;
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+}
+@media (min-width: 30em) {
+    .vakken {
+        display: grid;
+        grid-template-columns: 1fr;
+        padding-left: 3em;
+        padding-right: 2em;
+    }
+}
+@media (min-width: 38em) {
+    .vakken {
+        display: grid;
+        grid-template-columns: 1fr;
+        padding-left: 8em;
+        padding-right: 5em;
+    }
+}
+
+@media (min-width: 45em) {
+    .vakken {
+        display: grid;
+        grid-template-columns: 1fr;
+        padding-left: 10em;
+        padding-right: 0em;
+        padding-top: 5em;
+    }
+}
+
+@media (min-width: 60em) {
+    .vakken {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-column-gap: 0.2em;
+        grid-row-gap: 1em;
+        padding-left: 1em;
+        padding-right: 1em;
+        padding-top: 5em;
+    }
+}
+
+@media (min-width: 78em) {
+    .vakken {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-column-gap: 0.2em;
+        grid-row-gap: 1em;
+        padding-left: 2em;
+        padding-right: 2em;
+        padding-top: 5em;
+        padding-bottom: 5em;
+    }
+}
+
+.vakken a:hover {
+    transform: rotate(10deg);
+    overflow: hidden;
+}
+
+figure{
+  position:static;
+  position:relative; 
+/* position van static (de default) naar relative */
+  margin:0 auto;
+  
+  display:flex;
+  flex-direction:column-reverse;
+/* door flex + coloumn-reverse komt figcaption boven de img */
+}
+
+figcaption {
+    font-size: 0.9em;
+    padding-left: 0.5em;
+    padding-right: 0.5em;
+    padding-top: 0.5em;
+    padding-bottom: 0.5em;
+    font-weight: bold;
+    color: snow;
+    background-color: lightskyblue;
+    opacity: 0.5;
+    position: absolute;
+    top: 90%;
+    left: 34%;
+    transform: translate(-50%, -50%);
+  
+
+}
+
+
+/*-----------------------------------------------------------------------------------------------OVER MIJ PAGINA--------------------------*/
+
+.tekstovermij {
+        display: flex;
+        flex-direction: row;
+    }
+
+.fotomij {
+    width: 40em;
+}
+
+.fotomij:hover {
+    transition: 1.5s;
+    transform: rotate(360deg);
+}
+
+h2 {
+    font-size: 1.4em;
+    font-weight: lighter;
+    padding-right: 2em;
+}
+
+.tekst {
+    padding-right: 2em;
+    font-size: 1.2em;
+    padding-left: 1em;
+}
+
+@media (max-width: 70em) {
+    .tekstovermij {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .fotomij {
+        width: 100%;
+    }
+
+    h2 {
+        padding-top: 0em;
+    }
+}
+
+.hallo {
+    font-size: 2em;
+    display: flex;
+    justify-content: center;
+    transition-duration: 2s;
+}
+
+
+.hallo:hover {
+    transform: rotate(180deg);
+    transition: 1s;
+    color: lightskyblue;
+}
+}
+
+/*-----------------------------------------------------------------------------------------------VID PAGINA-------------------------------*/
+
+.vidfoto {
+    width: 100%;
+    padding-left: 3em;
+}
+
+@media (min-width: 23em) {
+    .gridvid{
+        display: flex;
+        flex-direction: column;
+        }
+    .vidfoto {
+        padding-right: 0.5em;
+        padding-left: 0.5em;
+        padding-bottom: 0.5em;
+        width: 100%;
+    }
+}
+
+@media (min-width: 53em) {
+     .gridvid{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+    }
+    .tekstvid {
+        padding-left: 2em;
+    }
+
+    .vidfoto {
+        padding-right: 0em;
+        padding-top: 3em;
+        padding-bottom: 1em;
+        width: 28em;
+    }
+}
+
+@media (min-width: 75em) {
+     .gridvid{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+    }
+    .tekstvid {
+        padding-left: 0em;
+        padding-right: 2em;
+    }
+
+    .vidfoto {
+        padding-right: 0em;
+        padding-left: 2em;
+        padding-bottom: 1em;
+        width: 40em;
+    }
+
+}
+
+/*----------------------------------------------------------------------------------------------SNOOZY PAGINA-----------------------------*/
+.grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-column-gap: 0em;
+    padding-left: 2em;
+    padding-right: 2.5em;
+}
+.fotosnoozy{
+    width: 40em;
+    height: 30em;
+}
+.slideshow{
+    padding-top: 5em;
+    position: relative;
+    width: 100%;
+    height: 30em;
+}
+
+.fade:not(.show) {
+    opacity: 1;
+}
+.tekstsnoozy {
+    padding-right: 2em;
+    font-size: 1.2em;
+    padding-left: 1em;
+}
+.link{
+    grid-column: 2;
+}
+
+@media (max-width: 71em){
+    .grid{
+    display: flex;
+    flex-direction: column;
+    }
+    .fotosnoozy{
+    max-width:100%;
+    max-height:100%;
+    }
+    
+    .slideshow{    
+    text-align: center;
+    padding-top: 1em;
+    position: relative;
+    }
+        
+    .tekstsnoozy {
+    margin-top: 2em;
+    padding-right: 2em;
+    font-size: 1.2em;
+    padding-left: 1em;
+}
+
+
+/*-----------------------------------------------------------------------------------------------CONTACT PAGINA---------------------------*/
+form {
+    display: flex;
+    flex-direction: column;
+    transition: all .5s;
+    padding: 1em;
+   background-color: lightgreen;
+}
+
+fieldset {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-bottom: 1em;
+    border: none;
+    transition: all .2s;
+    padding: 1em;  
+}
+fieldset:valid p {
+    display: block;
+    color: White;
+    background-color: seaGreen;
+    padding: 0.5em;
+    width: 70%;
+}
+fieldset:invalid p {
+    display: none;
+}
+
+/* zorgen dat de tekst niet te zien is*/
+legend {
+    font-size: 1.5em;
+    font-weight: bold;
+}
+
+input {
+    border-color: black;
+    padding: 0.5em;
+    font-size: 1.5em;
+    margin-bottom: 1em;
+    width: 70%;
+    transition: all 2s;
+}
+
+input:valid {
+    border-color: green;
+}
+
+input:invalid {
+    border-color: Red;  
+}
+
+textarea {
+    border-color: green;
+    padding: 0.5em;
+    transition: all 2s;
+    padding: 1em;
+    width: 70%;
+    height: 20em;
+    resize: none; /* raar dingetje rechts onder weg*/
+}
+
+textarea:invalid {
+    border-color: Red;
+}
+
+.focus:focus {
+    transform: scale(1.05, 1.05);
+}
+/* gebruikte bron:codepen.io/joostf/pen/VKyPxk*/
+
+button {
+    font-size: 1.5em;
+    transition: all .2s 1s;
+    opacity: 1; /* WEG HALEN*/
+    width: 10em;
+    height: 2em;
+    margin-left: 1em;
+    grid-column: 2;
+}
+
+form:valid button {
+    opacity: 1
+}
+
+button:focus {
+    transform: scale(1.1, 1.1);
+}
+
+.tekst {
+    padding-left: 1em;
+}
+
+.formulier {
+    padding-left: 1em;
+    padding-right: 1em;
+}
+
+@media (min-width: 34em) {
+    .formulier {
+        padding-left: 2em;
+        padding-right: 20%;
+    }
+
+    .tekst {
+        padding-left: 2em;
+    }
+
+}
+/*-----------------------------------------------------------------------------------------------FOOTER---------------------------*/
+footer {
+    background-color: black;
+    display: flex;
+    
+}
+/*.logo{
+    width: 3em;
+    padding-right: 2em;
+}*/
+
+
+
+/* Always set the map height explicitly to define the size of the div
+       * element that contains the map. */
+#map {
+  height: 100%;
+}
+
+/* Optional: Makes the sample page fill the window. */
+html,
+body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
